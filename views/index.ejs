@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/qrcode.js"></script>
+    <title>QR Generator</title>
+</head>
+<body>
+    <h1>Scan Me!</h1>
+    <div id="qrcode"></div>
+    <script>
+        var qrcode = new QRCode("qrcode", {
+            text: "<%= url %>",
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H,
+            tooltip: false
+        });
+    </script>
+</body>
+</html>
